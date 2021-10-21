@@ -1,10 +1,12 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:injectable/injectable.dart';
 import 'package:notes_firebase_ddd/domain/auth/auth_failure.dart';
 import 'package:notes_firebase_ddd/domain/auth/i_auth_facade.dart';
 import 'package:notes_firebase_ddd/domain/auth/sign_in_form/sign_in_form_state.dart';
 import 'package:notes_firebase_ddd/domain/auth/value_objects.dart';
 
+@injectable
 class SignInFormNotifier extends StateNotifier<SignInFormState> {
   final IAuthFacade _authFacade;
 
