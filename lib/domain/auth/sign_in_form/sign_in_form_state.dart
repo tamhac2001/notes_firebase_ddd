@@ -16,12 +16,10 @@ class SignInFormState with _$SignInFormState {
     required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
   }) = _SignInFormState;
 
-  factory SignInFormState.initial() =>
-      SignInFormState(emailAddress: EmailAddress(''),
-          password: Password(''),
-          showErrorMessages: false,
-          isSubmitting: false,
-          authFailureOrSuccessOption: none());
-
-
+  factory SignInFormState.initial() => SignInFormState(
+      emailAddress: EmailAddress(''),
+      password: Password(''),
+      showErrorMessages: false,
+      isSubmitting: false,
+      authFailureOrSuccessOption: none());
 }

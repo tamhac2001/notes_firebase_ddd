@@ -7,6 +7,8 @@ abstract class ValueObject<T>{
   const ValueObject();
   Either<ValueFailure<String>,String> get value;
 
+  bool isValid() => value.isRight();
+
   @override
   bool operator ==(Object other) => identical(this, other) || other is ValueObject && runtimeType == other.runtimeType;
 

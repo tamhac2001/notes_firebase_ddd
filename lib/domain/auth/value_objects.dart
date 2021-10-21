@@ -7,6 +7,7 @@ class EmailAddress extends ValueObject<String>{
   @override
   final Either<ValueFailure<String>, String> value;
 
+
   factory EmailAddress(String input) {
     return EmailAddress._(
       validateEmailAddress(input),
