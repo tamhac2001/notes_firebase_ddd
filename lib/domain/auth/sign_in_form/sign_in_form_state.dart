@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:notes_firebase_ddd/domain/auth/auth_failure.dart';
@@ -11,7 +12,7 @@ class SignInFormState with _$SignInFormState {
   const factory SignInFormState({
     required EmailAddress emailAddress,
     required Password password,
-    required bool showErrorMessages,
+    required AutovalidateMode showErrorMessages,
     required bool isSubmitting,
     required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
   }) = _SignInFormState;
@@ -19,7 +20,7 @@ class SignInFormState with _$SignInFormState {
   factory SignInFormState.initial() => SignInFormState(
       emailAddress: EmailAddress(''),
       password: Password(''),
-      showErrorMessages: false,
+      showErrorMessages: AutovalidateMode.disabled,
       isSubmitting: false,
       authFailureOrSuccessOption: none());
 }
