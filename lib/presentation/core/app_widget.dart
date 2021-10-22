@@ -6,20 +6,17 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       title: 'Notes',
       home: const SignInScreen(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
-        primaryColor: Colors.green[800],
-        colorScheme: ThemeData.light().colorScheme.copyWith(secondary: Colors.blueAccent),
-        inputDecorationTheme:  InputDecorationTheme(
-          border: OutlineInputBorder(
+          primaryColor: Colors.green[800],
+          colorScheme: ThemeData.light().colorScheme.copyWith(secondary: Colors.blueAccent),
+          inputDecorationTheme: InputDecorationTheme(
+              border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.0),
-          )
-        )
-      ),
-
+          ))),
     );
   }
 }

@@ -15,6 +15,7 @@ class SignInForm extends ConsumerWidget {
           (either) => either.fold((failure) {
                 ScaffoldMessenger.of(context).removeCurrentSnackBar();
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  duration: const Duration(seconds: 2),
                   content: Text(failure.map(
                       cancelledByUser: (_) => 'Cancelled',
                       serverError: (_) => 'Server Error',
