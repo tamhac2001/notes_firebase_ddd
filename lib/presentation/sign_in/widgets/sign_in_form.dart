@@ -23,8 +23,8 @@ class SignInForm extends ConsumerWidget {
                       invalidEmailAndPasswordCombination: (_) => 'Invalid Email And Password')),
                 ));
               }, (_) {
-            //TODO: Navigate
-          }));
+                //TODO: Navigate
+              }));
     });
     return Form(
         autovalidateMode: state.showErrorMessages,
@@ -100,6 +100,12 @@ class SignInForm extends ConsumerWidget {
                   ref.watch(signInFormNotifierProvider.notifier).signInWithGooglePressed();
                 },
               ),
+              if (state.isSubmitting) ...[
+                const SizedBox(
+                  height: 8.0,
+                ),
+                const LinearProgressIndicator(),
+              ]
             ],
           ),
         ));

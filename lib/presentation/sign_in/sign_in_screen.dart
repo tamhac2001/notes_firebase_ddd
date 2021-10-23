@@ -11,7 +11,7 @@ class SignInScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Sign In'),
       ),
-      body:  SignInForm(),
+      body:  const SignInForm(),
     );
   }
 }
