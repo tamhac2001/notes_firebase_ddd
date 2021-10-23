@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:notes_firebase_ddd/presentation/sign_in/sign_in_screen.dart';
+import 'package:notes_firebase_ddd/presentation/routes/app_router.gr.dart';
 
 class AppWidget extends StatelessWidget {
-  const AppWidget({Key? key}) : super(key: key);
+  AppWidget({Key? key}) : super(key: key);
+  final _appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerDelegate: _appRouter.delegate(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
       title: 'Notes',
-      home: const SignInScreen(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
           primaryColor: Colors.green[800],

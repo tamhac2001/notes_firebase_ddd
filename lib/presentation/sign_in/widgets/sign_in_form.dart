@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:notes_firebase_ddd/domain/auth/sign_in_form/sign_in_form_state.dart';
+import 'package:notes_firebase_ddd/application/auth/sign_in_form/sign_in_form_state.dart';
 import 'package:notes_firebase_ddd/providers.dart';
 
 class SignInForm extends ConsumerWidget {
